@@ -1,17 +1,16 @@
-import { EventEmitter } from 'eventemitter3';
+import { AIKitOptions, GeneratorTextOptions } from "./type";
 
+class AIKit {
+  private _log: any;
+  private _APIKEY: string;
 
-class AIKit extends EventEmitter<any> {
-
-  private _log: any; //
-
-  constructor(options: any) {
-    super();
-
+  constructor(options: AIKitOptions) {
+    const { apiKey } = options;
+    this._APIKEY = apiKey;
   }
 
-  init() {}
+  async generatorText(options: GeneratorTextOptions) {}
 
-  destroy () {}
+  destroy() {}
 }
 export default AIKit;

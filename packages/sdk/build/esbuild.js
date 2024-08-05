@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 const fs = require('fs');
-// const define = require('../package.json')
 const esbuild = require('esbuild');
 const yargs = require('yargs');
 const { hideBin } = require('yargs/helpers');
-const { createServer, request } = require('http');
-const { spawn } = require('child_process');
 const argv = yargs(hideBin(process.argv))
   .alias('a', 'assetsPath')
   .alias('d', 'dir')
@@ -79,17 +76,17 @@ function onBuild(error) {
 }
 esbuild.build(config).then(onBuild, onBuild);
 
-esbuild.serve({ port: 8888, servedir: '../dist' }, {}).then(() => {
-  createServer(async (req, res) => {
-    const { url, method, headers } = req;
-    if (req.url === '/esbuild')
-      return clients.push(
-        res.writeHead(200, {
-          'Content-Type': 'text/event-stream',
-          'Cache-Control': 'no-cache',
-          Connection: 'keep-alive',
-        })
-      );
-    await waitBuildSuccess();
-  }).listen(9988);
-});
+// esbuild.serve({ port: 8888, servedir: '../dist' }, {}).then(() => {
+//   createServer(async (req, res) => {
+//     const { url, method, headers } = req;
+//     if (req.url === '/esbuild')
+//       return clients.push(
+//         res.writeHead(200, {
+//           'Content-Type': 'text/event-stream',
+//           'Cache-Control': 'no-cache',
+//           Connection: 'keep-alive',
+//         })
+//       );
+//     await waitBuildSuccess();
+//   }).listen(9988);
+// });

@@ -1,18 +1,15 @@
 {
-  "name": "ai-kit-sdk",
+  "name": "@aikit/sdk",
   "version": "0.0.1",
   "main": "dist/ai-kit.js",
   "dependencies": {
     "eventemitter3": "^4.0.7"
   },
   "scripts": {
-    "dev": "node ./build/esbuild -f iife -d ../dist",
-    "esbuild": "node ./build/esbuild",
+    "dev": "node ./build/esbuild main.ts -f iife -d dist",
+    "build": "node ./build/esbuild",
     "lint": "./node_modules/.bin/eslint ./src",
-    "fix": "./node_modules/.bin/eslint ./src --fix",
-    "test": "karma start",
-    "test:coverage": "karma start --coverage=true",
-    "test:debug": "karma start --debug=true"
+    "fix": "./node_modules/.bin/eslint ./src --fix"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.40.1",
@@ -20,17 +17,8 @@
     "esbuild": "^0.15.6",
     "eslint": "^8.21.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "karma": "^4.1.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-coverage": "^2.1.0",
-    "karma-esbuild": "^2.2.5",
-    "karma-jasmine": "^2.0.1",
-    "karma-jasmine-diff-reporter": "^2.0.1",
-    "karma-rollup-preprocessor": "^7.0.0",
-    "karma-spec-reporter": "0.0.32",
-    "karma-typescript": "^5.5.3",
     "prettier": "^2.7.1",
-    "typescript": "~4.5.5",
+    "typescript": "^5.5.4",
     "yargs": "^17.5.1"
   }
 }
