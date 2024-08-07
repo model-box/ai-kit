@@ -4,7 +4,26 @@
 </body>
 <script src="ai-kit.js"></script>
 <script>
-  const aiKit = new AIKit();
+  const aiKit = new AIKit({
+    apiKey: '',
+    endpoint: '',
+  });
   console.log(1212, aiKit);
+
+  const request = {
+    model: 'gpt-3.5-turbo',
+    messages: [
+      { role: 'system', content: 'You are a helpful assistant.' },
+      { role: 'user', content: 'Tell me a joke.' },
+    ],
+  };
+
+  aiKit.getChatCompletion(request)
+    .then(response => {
+      console.log('Chat Completion Response:', response);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
 </script>
 </html>
