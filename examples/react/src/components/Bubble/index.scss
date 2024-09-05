@@ -1,0 +1,20 @@
+.Bubble {
+  max-width: 300px;
+  min-width: 1px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  
+  &.text,
+  &.typing {
+    min-width: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    margin: 0;
+  }
+}

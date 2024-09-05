@@ -1,5 +1,6 @@
 import { COMPLETIONAPI } from "./const";
 import { ChatCompletionReq, ChatCompletionRes } from "./openAI/type";
+
 export interface AIKitOptions {
   apiKey: string;
   endpoint?: string;
