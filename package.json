@@ -1,37 +1,16 @@
 {
-  "name": "root",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "examples/*"
-  ],
-  "engines": {
-    "node": ">=16",
-    "pnpm": ">=7"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pnpm run lint"
-    }
-  },
   "scripts": {
-    "clean": "rm -rf node_modules **/*/node_modules",
-    "lint": "./packages/sdk/node_modules/.bin/eslint ./packages/sdk/src",
-    "start:sdk": "pnpm run --filter @aikit/sdk start",
-    "build:sdk": "pnpm run --filter @aikit/sdk build",
-    "build:demo": "pnpm run --filter examples/react build",
-    "build": "pnpm run build:sdk && pnpm run build:demo",
-    "publish-npm": "node ./scripts/publish-npm.js"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@babel/core": "^7.18.9",
-    "@typescript-eslint/eslint-plugin": "^5.40.1",
-    "@typescript-eslint/parser": "^5.40.1",
-    "cos-nodejs-sdk-v5": "^2.9.6",
     "eslint": "^8.57.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.1",
-    "prettier": "^2.7.1",
-    "typescript": "^5.5.4"
-  }
+    "prettier": "^3.2.5",
+    "turbo": "^2.1.1"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "name": "with-rollup"
 }
