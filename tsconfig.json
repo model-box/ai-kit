@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "jsxImportSource": "@emotion/react"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
