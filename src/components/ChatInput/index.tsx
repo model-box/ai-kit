@@ -43,14 +43,27 @@ export const ChatInput = ({
 }: ChatInputProps) => {
   const styles = useStyles({});
 
+  const handleActionClick = (action: string) => {
+    setInput(action);
+    const syntheticEvent = {
+      preventDefault: () => {},
+    } as FormEvent<HTMLFormElement>;
+
+    handleSubmit(syntheticEvent);
+  };
+
   return (
     <div css={styles.container}>
       {messages.length === 0 && (
         <div css={styles.actionsContainer}>
           {suggestedActions.map((suggestedAction) => (
-            <div key={suggestedAction.title} css={styles.action}>
+            <button
+              onClick={() => handleActionClick(suggestedAction.action)}
+              key={suggestedAction.title}
+              css={styles.action}
+            >
               {suggestedAction.title}
-            </div>
+            </button>
           ))}
         </div>
       )}
