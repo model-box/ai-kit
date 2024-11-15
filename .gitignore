@@ -1,0 +1,6 @@
+dist
+node_modules
+.storybook
+.cache
+.env
+.env.local
