@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@model-box/ai-kit':
-        specifier: 0.0.1-beta.2
-        version: 0.0.1-beta.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 0.0.1-beta.3
+        version: 0.0.1-beta.3(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -407,8 +407,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@model-box/ai-kit@0.0.1-beta.2':
-    resolution: {integrity: sha512-4JFgTnZJVd/oip0odzTcZ6g9mF80/JyOXKyztxbqYAiRkre9lu7QifEyh6xCbSqnuWJ3EYkM75DGCVGBtrWt5w==}
+  '@model-box/ai-kit@0.0.1-beta.3':
+    resolution: {integrity: sha512-rioMwNyKMxn9HdmWSj+2xV2STwkfCOkO8sNxi/id2/Q5iTGCjW7tf+S+rQOAs1DOkQEsZwZ8HwiHhjAjKNy3PQ==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -2306,7 +2306,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@model-box/ai-kit@0.0.1-beta.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@model-box/ai-kit@0.0.1-beta.3(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@emotion/react': 11.13.3(@types/react@18.3.12)(react@18.3.1)
       '@radix-ui/react-avatar': 1.1.1(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
